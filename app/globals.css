@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f7fbff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #172033;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(94, 234, 212, 0.22), transparent 26rem),
+    radial-gradient(circle at 88% 16%, rgba(251, 191, 36, 0.18), transparent 24rem),
+    linear-gradient(180deg, #f8fcff 0%, #eef9f8 52%, #fffaf0 100%);
+  font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .section-card {
+    @apply rounded-lg border border-white/70 bg-white/80 shadow-soft backdrop-blur;
+  }
+
+  .input-shell {
+    @apply rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100;
+  }
+}
